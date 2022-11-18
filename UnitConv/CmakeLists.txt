@@ -1,1 +1,8 @@
+cmake_minimum_required(VERSION 3.15)
+project(unitconv CXX)
 
+add_library(unitconv src/unitconv.cpp)
+target_include_directories(unitconv PUBLIC include)
+
+set_target_properties(unitconv PROPERTIES PUBLIC_HEADER "include/unitconv.h")
+install(TARGETS unitconv)
